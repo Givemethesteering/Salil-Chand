@@ -75,13 +75,54 @@
             color: #2c3e50;
             font-weight: bold;
         }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid #2c3e50;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .library-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        
+        .notebook-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .notebook-btn:hover {
+            background-color: #1a252f;
+        }
     </style>
 </head>
 <body>
 
     <div class="profile-header clearfix">
         <img src="images/profile.jpg" alt="Salil Chand" class="profile-photo">
-        
         <h1>Salil Chand</h1>
         <p class="highlight">Data Analysis Specialist</p>
         
@@ -101,6 +142,24 @@
             <li><strong>Interests:</strong> Hiking, bikes, reading fictional novels and cooking food.</li>
             <li><strong>Community:</strong> Volunteering as a bicycle mechanic.</li>
         </ul>
+    </div>
+
+        <h2>Portfolio Projects</h2>
+
+    <div class="project-card">
+        <h3>Bike-Sharing Urban Mobility Analysis</h3>
+        <ul>
+            <li><strong>Hypothesis:</strong> Proximity to major transit hubs increases bike-sharing utilization during morning commuting hours.</li>
+            <li><strong>Methodology:</strong> Exploratory Data Analysis (EDA) and spatial clustering of station usage over a 6-month period.</li>
+            <li><strong>Libraries Used:</strong> 
+                <span class="library-tag">Pandas</span> 
+                <span class="library-tag">Folium</span> 
+                <span class="library-tag">Matplotlib</span>
+            </li>
+            <li><strong>Results:</strong> Identified a 40% spike in bike checkouts near train stations between 7 AM and 9 AM, indicating strong commuter reliance.</li>
+        </ul>
+
+    <a href="#" class="notebook-btn">View Interactive Notebook</a>
     </div>
 
 </body>
