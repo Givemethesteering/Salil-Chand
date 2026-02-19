@@ -1,8 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salil Chand | Portfolio</title>
+    <style>
+        /* General Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        /* Profile Section */
+        .profile-header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            float: right;
+            margin: 0 0 20px 20px;
+            width: 180px; /* Adjust size here */
+            height: auto;
+            border-radius: 50%; /* Makes the photo circular */
+            border: 3px solid #2c3e50;
+            object-fit: cover;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        h1 { 
+            color: #2c3e50; 
+            margin-top: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Sections */
+        .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
-  <h1>Salil Chand's Portfolio</h1>
-  <img src="images/profile.jpg">
-  <p>Welcome to my data science site.</p>
+
+    <div class="profile-header clearfix">
+        <img src="images/profile.jpg" alt="Salil Chand" class="profile-photo">
+        
+        <h1>Salil Chand</h1>
+        <p class="highlight">Data Analysis Specialist</p>
+        
+        <h2>Personal Statement</h2>
+        <p>
+            I am a data professional focused on the intersection of geospatial data and planetary health. 
+            With a background in data analysis and a commitment to sustainability, I leverage analytical tools 
+            to solve complex spatial problems and promote health for humans and ecology. 
+        </p>
+    </div>
+
+    <div class="content-section">
+        <h2>Interests</h2>
+        <ul>
+            <li><strong>Data Analysis and Visualization:</strong> Using tools to analyze data, find patterns and visualize insights.</li>
+            <li><strong>Data Engineering:</strong> Building efficient pipelines with BigQuery, dbt, and Python.</li>
+            <li><strong>Outdoor Exploration:</strong> Enthusiastic hiker and international travel planner.</li>
+            <li><strong>Community:</strong> Volunteering as a bicycle mechanic.</li>
+        </ul>
+    </div>
+
 </body>
 </html>
