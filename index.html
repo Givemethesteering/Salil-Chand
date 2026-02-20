@@ -3,146 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salil Chand | Portfolio</title>
+    <title>Salil Chand - Data Analyst Portfolio</title>
     <style>
-        /* General Layout */
+        /* --- Global Styles --- */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 20px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6; /* Light grey background for contrast */
             color: #333;
-            background-color: #fafafa;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
         }
 
-        /* Profile Section */
-        .profile-header {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+        /* --- Main Container --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 8px;
         }
 
-        .profile-photo {
-            float: right;
-            margin: 0 0 20px 20px;
-            width: 180px; 
-            height: auto;
-            border-radius: 0; 
-            border: none; 
-            object-fit: cover;
-}
+        /* --- Section Styles --- */
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
         }
 
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        h1 { 
-            color: #2c3e50; 
-            margin-top: 0;
-            font-size: 2.5rem;
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         h2 {
-            color: #34495e;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        /* Sections */
-        .content-section {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .highlight {
             color: #2c3e50;
-            font-weight: bold;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db; /* Blue accent border */
+            padding-left: 15px;
         }
 
+        /* --- Profile Section Styles --- */
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .profile-text {
+            flex: 2;
+        }
+
+        .profile-text h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        .profile-text h3 {
+            margin-top: -10px;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+
+        .profile-photo-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .github-note {
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+            color: #666;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .github-note a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .github-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Interests Section Styles --- */
+        .interests-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .interests-list li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+        }
+
+        /* --- Projects Section Styles --- */
         .project-card {
-            background: white;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            border-left: 5px solid #2c3e50;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
 
         .project-card h3 {
             margin-top: 0;
             color: #2c3e50;
-            border-bottom: none;
-            padding-bottom: 0;
         }
-        
-        .notebook-btn {
+
+        .project-meta {
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .project-section-title {
+            font-weight: 600;
+            color: #333;
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background-color: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            width: 100px;
         }
-        
-        .notebook-btn:hover {
-            background-color: #1a252f;
+
+        .project-image {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .profile-photo-container {
+                margin-bottom: 20px;
+            }
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+            h2 {
+                border-left: none;
+                border-bottom: 4px solid #3498db;
+                padding-left: 0;
+                padding-bottom: 10px;
+            }
+            .interests-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-header clearfix">
-        <img src="images/profile.jpg" alt="Salil Chand" class="profile-photo">
-        <h1>Salil Chand</h1>
-        <p class="highlight">Data Analyst</p>
-        <p> I am a data enthusiast focused on the intersection of business problems and data-driven solutions. 
-            With a background in business analytics and a commitment to data integrity, I leverage analytical tools 
-            to provide insights into complex problems. I aspire to use Geospatial data to inform sustainability efforts, promoting health for humans and ecology. 
-        </p>
-        <p style="text-align: center; font-style: italic; margin-bottom: 25px;">
-    Note: The source code and documentation for my projects are actively maintained on <a href="https://github.com/Givemethesteering" target="_blank">my GitHub</a>.
-</p>
-    </div>
+<div class="container">
+    <section id="profile">
+        <div class="profile-header">
+            <div class="profile-text">
+                <h1>Salil Chand</h1>
+                <h3>Data Analyst</h3>
+                <p>I am a data enthusiast focused on the intersection of business problems and data-driven solutions. With a background in business analytics and a commitment to data integrity, I leverage analytical tools to provide insights into complex problems. I aspire to use Geospatial data to inform sustainability efforts, promoting health for humans and ecology.</p>
+            </div>
+            <div class="profile-photo-container">
+                <img src="your-photo.jpg" alt="Salil Chand" class="profile-photo">
+            </div>
+        </div>
+        <div class="github-note">
+            Note: The source code and documentation for my projects are actively maintained on <a href="YOUR_GITHUB_LINK_HERE" target="_blank">my GitHub</a>.
+        </div>
+    </section>
 
-    <div class="content-section">
+    <section id="interests">
         <h2>Interests</h2>
-        <ul>
+        <ul class="interests-list">
             <li><strong>Analysis and Visualization:</strong> Using tools to analyze data, find patterns and visualize insights.</li>
             <li><strong>Tools:</strong> SQL, BigQuery, dbt, and Python.</li>
             <li><strong>Interests:</strong> Hiking, bikes, reading fictional novels and cooking food.</li>
             <li><strong>Community:</strong> Volunteering as a bicycle mechanic.</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="project-item">
-        <h3>Exploratory Data Analysis: London Bike Share Dataset</h3>
-        <p><strong>Tools used:</strong> Python, Pandas, Matplotlib, Seaborn</p>
-        <p><strong>Hypothesis:</strong> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
-        <p><strong>Overview:</strong> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
-        <p><strong>Result:</strong> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
-        <img src="images/bike_heatmap.png" alt="Bike Share Station Heatmap" style="max-width: 100%; height: auto;">
-        <br>
-        <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-analysis.ipynb" target="_blank">View Python Code on GitHub</a>
-    </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Exploratory Data Analysis: London Bike Share Dataset</h3>
+            <div class="project-meta">
+                <strong>Tools used:</strong> Python, Pandas, Matplotlib, Seaborn
+            </div>
+            <p><span class="project-section-title">Hypothesis:</span> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
+            <p><span class="project-section-title">Overview:</span> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized station-to-station traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
+            <p><span class="project-section-title">Result:</span> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
+            <img src="heatmap.png" alt="London Bike Share Heatmap" class="project-image">
+        </div>
+        </section>
+</div>
 
 </body>
 </html>
