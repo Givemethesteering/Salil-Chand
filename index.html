@@ -232,19 +232,56 @@
                 <img src="images/extreme_weather_events_3_stddev.png" alt="Temperature Distribution KDE Chart" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #eee;">
             </div>
             <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/Weather-analysis.ipynb" class="notebook-btn">View Notebook</a>
-        
         </div>
         <div class="project-card">
-        <h3>Exploratory Data Analysis: London Bike Share Dataset</a></h3>
-            <div class="project-meta">
-                <strong>Libraries used:</strong> Python, Pandas, Matplotlib, Seaborn
-            </div>
-            <p><span class="project-section-title">Hypothesis:</span> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
-            <p><span class="project-section-title">Overview:</span> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized station-to-station traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
-            <p><span class="project-section-title">Result:</span> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
-            <img src="images/bike_heatmap.jpg" alt="London Bike Share Heatmap" class="project-image">
-            </div>
-            <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-analysis.ipynb" class="notebook-btn">View Notebook</a>
+            <h3>London Maximum Temperature Forecasting</h3>
+            
+            <h4>Objective</h4>
+            <ul>
+                <li>Built a time series model to predict future maximum temperatures in London based on historical data.</li>
+            </ul>
+
+            <h4>Critical Variable Selection (TX vs. TG)</h4>
+            <ul>
+                <li><strong>Forecasting Maximum (TX) over Mean (TG):</strong> Mean temperatures artificially smooth the data and mask extreme events.</li>
+                <li><strong>Real-World Impact:</strong> Forecasting <code>TX</code> is more challenging due to higher variance, but it provides actionable insights for real-world impacts like infrastructure strain and heat stress.</li>
+                <li><strong>Climate Signal:</strong> Tracking maximums better captures the aggressive warming trends of climate change at the extremes.</li>
+            </ul>
+
+            <h4>Data Preparation & Splitting</h4>
+            
+            <ul>
+                <li><strong>Indexing:</strong> Set the <code>DATE</code> column as the index.</li>
+                <li><strong>Resampling:</strong> Aggregated the daily data into monthly maximums to establish a clear 12-month seasonal cycle.</li>
+                <li><strong>Train/Test Split:</strong> Divided the 44-year dataset into a training set (1979–2018) to train the model, and a hidden testing set (2019–2023) to evaluate real-world accuracy.</li>
+            </ul>
+
+            <h4>Modeling Approach</h4>
+            <ul>
+                <li><strong>Algorithm:</strong> Implemented a Holt-Winters Triple Exponential Smoothing model using <code>statsmodels</code>.</li>
+                <li><strong>Configuration:</strong> Configured the model with an additive trend and an additive 12-month seasonal period to map London's annual weather rhythm.</li>
+            </ul>
+
+            <h4>Performance Results</h4>
+            <ul>
+                <li><strong>Mean Absolute Error (MAE): 2.28°C.</strong> On average, predictions were off by about 2.3 degrees from actual extreme highs.</li>
+                <li><strong>Mean Squared Error (MSE): 9.18.</strong></li>
+                <li><strong>Root Mean Squared Error (RMSE): 3.03°C.</strong> Because RMSE penalizes large errors heavily, the gap between MAE and RMSE indicates the model missed a few massive, unexpected heat spikes (likely recent record-breaking UK heatwaves).</li>
+            </ul>
+
+            <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/Weather-forecast.ipynb" class="notebook-btn">View Notebook</a>
+        </div>
+        <div class="project-card">
+            <h3>Exploratory Data Analysis: London Bike Share Dataset</a></h3>
+                <div class="project-meta">
+                    <strong>Libraries used:</strong> Python, Pandas, Matplotlib, Seaborn
+                </div>
+                <p><span class="project-section-title">Hypothesis:</span> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
+                <p><span class="project-section-title">Overview:</span> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized station-to-station traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
+                <p><span class="project-section-title">Result:</span> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
+                <img src="images/bike_heatmap.jpg" alt="London Bike Share Heatmap" class="project-image">
+                </div>
+                <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-analysis.ipynb" class="notebook-btn">View Notebook</a>
         </div>
         </section>
 </div>
