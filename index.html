@@ -214,6 +214,31 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-card">
+            <h3>London Weather Analysis (1979-2023)</h3>
+            <ul>
+                <li><strong>Focus:</strong> Analyzing 44 years of historical climate data to track long-term temperature shifts and the frequency of extreme weather events.</li>
+                <li><strong>Methodology:</strong> 
+                    <ul>
+                        <li>Preprocessed and scaled Kaggle dataset variables (Maximum, Minimum, Mean Temps, and Precipitation).</li>
+                        <li>Applied iterative statistical methods (Static Thresholds, 75th Percentile Quartiles, and +2/+3 Standard Deviations) to dynamically define extreme events.</li>
+                        <li>Calculated linear trendlines and Kernel Density Estimates (KDE) to model historical distributions.</li>
+                    </ul>
+                </li>
+                <li><strong>Libraries Used:</strong> 
+                    <span class="library-tag">Pandas</span> 
+                    <span class="library-tag">NumPy</span> 
+                    <span class="library-tag">Matplotlib/Seaborn</span>
+                </li>
+                <li><strong>Results:</strong> Quantified historical climate shifts and visualized the statistical rarity of extreme heat and rainfall using comprehensive distribution mapping.</li>
+            </ul>
+
+            <div style="margin: 20px 0;">
+                <img src="images/temperature_distributions_stddev.png" alt="Temperature Distribution KDE Chart" style="width: 100%; max-width: 600px; border-radius: 6px; border: 1px solid #eee;">
+            </div>
+
+            <a href="https://github.com/[YourUsername]/Salil-Chand/blob/main/projects/london-weather.ipynb" class="notebook-btn">View Notebook</a>
+        </div>
+        <div class="project-card">
         <h3><a href="bike-analysis.ipynb" target="_blank" style="text-decoration: underline; color: inherit;">Exploratory Data Analysis: London Bike Share Dataset</a></h3>
             <div class="project-meta">
                 <strong>Tools used:</strong> Python, Pandas, Matplotlib, Seaborn
