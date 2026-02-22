@@ -214,7 +214,34 @@
     <section id="projects">
         <h2>Projects</h2>
 
-                <div class="project-card">
+        <div class="project-card">
+            <h3>Usage-Based Station Clustering Analysis</h3>
+            
+            <p><span class="project-section-title">Objective:</span> Segment bike share stations based on rider behavior to identify distinct operational roles across the network.</p>
+            
+            <p><span class="project-section-title">Methodology:</span> Engineered usage metrics from the raw trip data and applied the K-Means clustering algorithm to group stations with mathematically similar patterns.</p>
+            
+            <p><strong>Key Features Evaluated:</strong></p>
+            <ul>
+                <li><strong>Morning Commute Signal:</strong> Proportion of trips occurring during the morning rush (7 AM - 9 AM).</li>
+                <li><strong>Leisure Signal:</strong> Proportion of trips occurring on weekends.</li>
+                <li><strong>Ride Characteristic:</strong> Average duration of trips originating from the station.</li>
+            </ul>
+
+            <p><strong>Visualization:</strong> The chart below reflects the resulting clusters of stations, plotted on the axes of Proportion of Weekend Trips vs. Proportion of Morning Rush Trips.</p>
+            
+            <img src="images/Station_Clusters.jpg" alt="Station Clusters Scatter Plot" class="project-image">
+
+            <p><strong>Key Findings:</strong></p>
+            <ul>
+                <li><strong>Cluster 0 (Commuter Hubs):</strong> High morning rush usage, indicating stations used primarily for daily work commutes.</li>
+                <li><strong>Cluster 1 (Standard/Mixed):</strong> Lower, steady traffic spread evenly throughout the week.</li>
+                <li><strong>Cluster 2 (Leisure Spots):</strong> High weekend usage with minimal morning commutes, suggesting locations near recreational areas.</li>
+            </ul>
+            <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-clustering.ipynb" class="notebook-btn">View Notebook</a>
+        </div>
+
+        <div class="project-card">
             <h3>Forecasting: London Maximum Temperature</h3>
             
             <h4>Objective</h4>
@@ -249,7 +276,7 @@
                 <li><strong>Mean Squared Error (MSE): 9.18.</strong></li>
                 <li><strong>Root Mean Squared Error (RMSE): 3.03°C.</strong> Because RMSE penalizes large errors heavily, the gap between MAE and RMSE indicates the model missed a few massive, unexpected heat spikes (likely recent record-breaking UK heatwaves).</li>
             </ul>
-                <div style="margin: 20px 0;">
+            <div style="margin: 20px 0;">
                 <img src="images/tx_temperature_forecast.png" alt="Temperature Forecast Chart" style="width: 100%; max-width: 900px; border-radius: 6px; border: 1px solid #eee;">
             </div>
             <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/Weather-forecast.ipynb" class="notebook-btn">View Notebook</a>
@@ -277,18 +304,17 @@
         </div>
 
         <div class="project-card">
-            <h3>Exploratory Data Analysis: London Bike Share Dataset</a></h3>
-                <div class="project-meta">
-                    <strong>Libraries used:</strong> Python, Pandas, Matplotlib, Seaborn
-                </div>
-                <p><span class="project-section-title">Hypothesis:</span> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
-                <p><span class="project-section-title">Overview:</span> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized station-to-station traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
-                <p><span class="project-section-title">Result:</span> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
-                <img src="images/bike_heatmap.jpg" alt="London Bike Share Heatmap" class="project-image">
-                </div>
-                <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-analysis.ipynb" class="notebook-btn">View Notebook</a>
+            <h3>Exploratory Data Analysis: London Bike Share Dataset</h3>
+            <div class="project-meta">
+                <strong>Libraries used:</strong> Python, Pandas, Matplotlib, Seaborn
+            </div>
+            <p><span class="project-section-title">Hypothesis:</span> A small number of specific station-to-station routes account for a disproportionately high volume of daily commuter traffic.</p>
+            <p><span class="project-section-title">Overview:</span> Conducted exploratory data analysis on a public dataset to uncover commuting patterns. Visualized station-to-station traffic, and analyzed trip duration distributions using heatmaps and bar charts.</p>
+            <p><span class="project-section-title">Result:</span> Visualizations confirmed that ridership is heavily concentrated on a few key paths. These insights can help inform targeted bike redistribution strategies to improve urban mobility and environmental sustainability.</p>
+            <img src="images/bike_heatmap.jpg" alt="London Bike Share Heatmap" class="project-image">
+            <a href="https://github.com/Givemethesteering/Salil-Chand/blob/main/projects/bike-analysis.ipynb" class="notebook-btn">View Notebook</a>
         </div>
-        </section>
+    </section>
 </div>
 
 </body>
