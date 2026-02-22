@@ -215,26 +215,26 @@
         <h2>Projects</h2>
 
         <div class="project-card">
-            <h3>Usage-Based Station Clustering Analysis</h3>
+            <h3>Clustering Analysis: London Bike Share data</h3>
             
-            <p><span class="project-section-title">Objective:</span> Segment bike share stations based on rider behavior to identify distinct operational roles across the network.</p>
+            <p><span class="project-section-title">Objective:</span> Segment bike stations based on rider behavior across the network in the city of London.</p>
             
-            <p><span class="project-section-title">Methodology:</span> Engineered usage metrics from the raw trip data and applied the K-Means clustering algorithm to group stations with mathematically similar patterns.</p>
+            <p><span class="project-section-title">Methodology:</span> Created metrics from the raw bikes trips data and applied the K-Means clustering algorithm to group stations capturing patterns.</p>
             
-            <p><strong>Key Features Evaluated:</strong></p>
+            <p><strong>Key Dimensions/features Evaluated:</strong></p>
             <ul>
-                <li><strong>Morning Commute Signal:</strong> Proportion of trips occurring during the morning rush (7 AM - 9 AM).</li>
-                <li><strong>Leisure Signal:</strong> Proportion of trips occurring on weekends.</li>
+                <li><strong>Morning Commute:</strong> Proportion of trips occurring during the morning rush (7 AM - 9 AM).</li>
+                <li><strong>Leisure:</strong> Proportion of trips occurring on weekends.</li>
                 <li><strong>Ride Characteristic:</strong> Average duration of trips originating from the station.</li>
             </ul>
 
-            <p><strong>Visualization:</strong> The chart below reflects the resulting clusters of stations, plotted on the axes of Proportion of Weekend Trips vs. Proportion of Morning Rush Trips.</p>
+            <p><strong>Visualization:</strong> The chart below reflects the clusters of stations, plotted on the axes of Proportion of Weekend Trips vs. Proportion of Morning Rush Trips.</p>
             
             <img src="images/Station_Clusters.jpg" alt="Station Clusters Scatter Plot" class="project-image">
 
             <p><strong>Key Findings:</strong></p>
             <ul>
-                <li><strong>Cluster 0 (Commuter Hubs):</strong> High morning rush usage, indicating stations used primarily for daily work commutes.</li>
+                <li><strong>Cluster 0 (Commuter Hubs):</strong> High morning rush usage, indicating stations used primarily for daily work commute.</li>
                 <li><strong>Cluster 1 (Standard/Mixed):</strong> Lower, steady traffic spread evenly throughout the week.</li>
                 <li><strong>Cluster 2 (Leisure Spots):</strong> High weekend usage with minimal morning commutes, suggesting locations near recreational areas.</li>
             </ul>
